@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/mes1"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="30sp"
+        android:text="@string/more_details"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="19dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/mes3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/the"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        tools:text="The mortgage payment is calculated using the following formula :" />
+
+    <ImageView
+        android:id="@+id/formular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/formular"
+        android:src="@drawable/formular" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/example1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        tools:text='Your input for "P" would be $100,000. ' />
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/example2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/for"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"
+        tools:text='For "r" , you would use your monthly interest rate , which would be 0.06 ( 6 percent ) divided by 12 , or 0.005 ( 0.5 percent) .' />
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/example3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/for_n"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"
+        tools:text='For "n”, you would use your total number of payments, one for each month in fifteen years, which would be 12*15, or 180.' />
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/example4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/your_complete"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"
+        tools:text="Your complete equation would look like this:" />
+
+    <View
+        android:id="@+id/divider9"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="?android:attr/listDivider" />
+
+    <ImageView
+        android:id="@+id/example5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/exampleformular"
+        android:src="@drawable/exampleformular" />
+
+</LinearLayout>
