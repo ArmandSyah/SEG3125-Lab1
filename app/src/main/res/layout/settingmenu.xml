@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="24sp"
+        android:text="Currency :"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/Dollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/dollar"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/Euro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Euro"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/Pound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/pound"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/Payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="payment_frequency :"
+        android:textAlignment="viewStart"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/bi_weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bi_weekly"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/weekly"
+            android:textStyle="bold|italic" />
+
+        <CheckBox
+            android:id="@+id/monthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/monthly"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/listChoiceBackgroundIndicator"
+        android:text="Submit"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="bold|italic" />
+
+</LinearLayout>
