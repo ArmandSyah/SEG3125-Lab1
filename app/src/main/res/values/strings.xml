@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">MortgageApp</string>
+    <string name="currency">Currency</string>
+    <string name="dollar">Dollar</string>
+    <string name="euro">Euro</string>
+    <string name="pound">Pound</string>
+    <string name="payment_frequency">Payment Frequency</string>
+    <string name="bi_weekly">Bi_Weekly</string>
+    <string name="weekly">Weekly</string>
+    <string name="monthly">Monthly</string>
+    <string name="submit">Submit</string>
+    <string name="the_mortgage_payment_is_calculated_using_the_following_formula">The mortgage payment is calculated using the following formula :</string>
+    <string name="more_details">More Details :</string>
+    <string name="the">The</string>
+    <string name="formular">formular</string>
+    <string name="your">Your</string>
+    <string name="for">For</string>
+    <string name="for_n">Forn</string>
+    <string name="your_complete">Your complete</string>
+    <string name="exampleformular">exampleformular</string>
 </resources>
