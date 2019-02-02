@@ -3,137 +3,155 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".activities.Main.MainActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout"
+        android:layout_width="347dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="97dp">
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:layout_width="323dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="Principle Amount"
-            android:textColor="@android:color/background_dark"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:text="Mortgage Principle Text"
+            android:textColor="@android:color/black" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
+            <TextView
+                android:id="@+id/currSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView"
+                tools:text="$" />
+
             <EditText
-                android:id="@+id/principle_mortgage"
-                android:layout_width="225dp"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
+                android:id="@+id/mortgageAmount"
+                android:layout_width="295dp"
+                android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Enter Amount"
-                android:inputType="numberDecimal"
-                tools:layout_editor_absoluteX="26dp"
-                tools:layout_editor_absoluteY="221dp" />
+                android:inputType="numberDecimal" />
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:layout_width="354dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="32dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="236dp">
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
             android:text="Interest Rate"
-            android:textColor="@android:color/background_dark"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textColor="@android:color/black" />
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/interestRate"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/interest_rate"
-                android:layout_width="227dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:ems="10"
-                android:hint="Enter Rate"
-                android:inputType="numberDecimal"
-                tools:layout_editor_absoluteX="26dp"
-                tools:layout_editor_absoluteY="221dp" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="%"
-                android:textSize="18sp" />
-
-        </LinearLayout>
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Interest Rate %"
+            android:inputType="numberDecimal" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="31dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="374dp">
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/amortization_period"
-            android:layout_width="403dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="Amortization Period"
-            android:textColor="@android:color/background_dark"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
+            android:id="@+id/textView4"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:text="Amortization Period"
+            android:textColor="@android:color/black" />
 
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Enter # of "
-                android:inputType="number" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Years"
-                android:textSize="18sp" />
-        </LinearLayout>
+        <EditText
+            android:id="@+id/amortizationPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter # of Years"
+            android:inputType="numberDecimal" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/calculate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="536dp" />
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="278dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/calculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="28dp"
+            android:layout_weight="1"
+            android:text="Calculate"
+            app:layout_constraintBaseline_toBaselineOf="@+id/clearButton"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="60dp"
+            android:layout_weight="1"
+            android:text="Clear"
+            app:layout_constraintStart_toEndOf="@+id/calculateButton"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

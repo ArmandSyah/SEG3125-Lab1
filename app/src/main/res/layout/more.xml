@@ -66,7 +66,7 @@
         android:id="@+id/example2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/for"
+        android:text="@string/for_"
         android:textColor="@android:color/holo_blue_dark"
         android:textStyle="italic"
         tools:text='For "r" , you would use your monthly interest rate , which would be 0.06 ( 6 percent ) divided by 12 , or 0.005 ( 0.5 percent) .' />
