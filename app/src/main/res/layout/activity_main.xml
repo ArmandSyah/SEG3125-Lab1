@@ -3,8 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".activities.Main.MainActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginRight="41dp"
+        android:layout_marginBottom="8dp"
+        android:text="Enter the following details to get your mortgage payments"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -12,19 +32,22 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginBottom="12dp"
         android:orientation="vertical"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:layout_constraintVertical_chainStyle="packed">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="323dp"
             android:layout_height="wrap_content"
-            android:text="Mortgage Principle Text"
+            android:text="Mortgage Principle Amount (Required)"
             android:textColor="@android:color/black" />
 
         <LinearLayout
@@ -34,7 +57,7 @@
 
             <TextView
                 android:id="@+id/currSymbol"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="TextView"
@@ -44,6 +67,7 @@
                 android:id="@+id/mortgageAmount"
                 android:layout_width="295dp"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
                 android:hint="Enter Amount"
                 android:inputType="numberDecimal" />
@@ -57,24 +81,25 @@
         android:layout_height="62dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginBottom="12dp"
         android:orientation="vertical"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Interest Rate"
+            android:text="Interest Rate (Required)"
             android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/interestRate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:hint="Enter Interest Rate %"
             android:inputType="numberDecimal" />
@@ -87,14 +112,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="27dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="320dp"
         android:layout_marginEnd="27dp"
         android:layout_marginRight="28dp"
-        android:layout_marginBottom="31dp"
         android:orientation="vertical"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,40 +127,41 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Amortization Period"
+            android:text="Amortization Period (Required)"
             android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/amortizationPeriod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:autofillHints=""
             android:ems="10"
             android:hint="Enter # of Years"
-            android:inputType="numberDecimal" />
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
-        android:layout_width="278dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="32dp"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <Button
             android:id="@+id/calculateButton"
-            android:layout_width="wrap_content"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="96dp"
             android:layout_height="48dp"
             android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
             android:layout_weight="1"
             android:text="Calculate"
             app:layout_constraintBaseline_toBaselineOf="@+id/clearButton"
@@ -145,9 +169,11 @@
 
         <Button
             android:id="@+id/clearButton"
-            android:layout_width="wrap_content"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="96dp"
             android:layout_height="48dp"
             android:layout_marginStart="60dp"
+            android:layout_marginLeft="60dp"
             android:layout_weight="1"
             android:text="Clear"
             app:layout_constraintStart_toEndOf="@+id/calculateButton"

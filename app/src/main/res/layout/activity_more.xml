@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="28dp"
+    android:paddingRight="28dp">
+
+    <TextView
+        android:id="@+id/mes3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="The mortgage payment is calculated using the following formula:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/formular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="@string/formular"
+        android:src="@drawable/formular" />
+
+    <TextView
+        android:id="@+id/example1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="Your input for &quot;P&quot; would be $100,000. "
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/example2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text='For "r" , you would use your monthly interest rate , which would be 0.06 ( 6 percent ) divided by 12 , or 0.005 ( 0.5 percent) .'
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/example3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text='For "n”, you would use your total number of payments, one for each month in fifteen years, which would be 12*15, or 180.'
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/example4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your complete equation would look like this:"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/example5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="@string/exampleformular"
+        android:src="@drawable/exampleformular" />
+
+</LinearLayout>

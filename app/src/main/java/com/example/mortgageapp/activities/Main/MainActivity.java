@@ -69,19 +69,31 @@ public class MainActivity extends AppCompatActivity {
         calculateButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        String mortgageAmount = mortgageAmountEditText.getText().toString();
-                        String interestRate = interestRateEditText.getText().toString();
-                        String amortizationPeriod = amortizationPeriodEditText.getText().toString();
-                        if (mortgageAmount.length() == 0 ||
-                        interestRate.length() == 0 ||
-                        amortizationPeriod.length() == 0
-                    )
+                String mortgageAmount = mortgageAmountEditText.getText().toString();
+                String interestRate = interestRateEditText.getText().toString();
+                String amortizationPeriod = amortizationPeriodEditText.getText().toString();
+
+                if (mortgageAmount.length() == 0 ||
+                    interestRate.length() == 0 ||
+                    amortizationPeriod.length() == 0)
                 {
                     if(mortgageAmount.length() == 0) mortgageAmountEditText.setError("Mortgage amount is required!");
                     if(interestRate.length() == 0) interestRateEditText.setError("Interest rate is required!");
                     if(amortizationPeriod.length() == 0) amortizationPeriodEditText.setError("Amortization period is required!");
 
                     Toast.makeText(getApplicationContext(), "Missing Fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (Double.parseDouble(mortgageAmount) < 0 ||
+                    Double.parseDouble(interestRate) < 0 ||
+                    Double.parseDouble(amortizationPeriod) < 0)
+                {
+                    if(Double.parseDouble(mortgageAmount) < 0) mortgageAmountEditText.setError("Mortgage amount must not be negative!");
+                    if(Double.parseDouble(interestRate) < 0) interestRateEditText.setError("Interest rate must not be negative!");
+                    if(Double.parseDouble(amortizationPeriod) < 0) amortizationPeriodEditText.setError("Amortization period must not be negative!");
+
+                    Toast.makeText(getApplicationContext(), "Invalid input on Fields", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -115,9 +127,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        Intent intent;
         switch (id){
             case R.id.menuSettingsOption:
-                Intent intent = new Intent(this, SettingsActivity.class);
+                intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.menuMoreOption:
+                intent = new Intent(this, MoreActivity.class);
                 startActivity(intent);
                 break;
         }

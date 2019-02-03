@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MortgageApp</string>
+    <string name="app_name">Mortgage Payment Calculator</string>
     <string name="currency">Currency</string>
     <string name="dollar">Dollar</string>
     <string name="euro">Euro</string>
